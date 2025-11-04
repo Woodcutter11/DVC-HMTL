@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Davao Vison Colleges (DVC)</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+    padding:0px;
+    margin:0px;
+    font-family: 'Montserrat',sans-serif;
+}
+.html {
+    scroll-behavior: smooth;
+}
+
+.fade-slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.slide-wrapper img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+.fade-slideshow-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeAnimation 15s infinite ease-in-out both;
+}
+
+
+.fade-slideshow-container img:nth-child(1) { animation-delay: 0s; }
+.fade-slideshow-container img:nth-child(2) { animation-delay: 5s; }
+.fade-slideshow-container img:nth-child(3) { animation-delay: 10s; }
+
+
+@keyframes fadeAnimation {
+  0%      { opacity: 0; }
+  3.333%  { opacity: 1; }   
+  33.333% { opacity: 1; }  
+  36.666% { opacity: 0; }  
+  100%    { opacity: 0; }
+}
+
+.container{
+    width: 1500px;
+    margin: 0px auto;
+
+}
+.top-header{
+    background:#800020;
+    padding: 10px 0px;
+    border-bottom: 1px solid #3131315e;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+}
+.news-list{
+    background: #002147;
+    color: #ffffff;
+    padding: 13px;
+    font-size: 16px;
+    margin-left: 0px;
+    margin-top: 10px;
+    
+}
+.headquote{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    
+}
+
+.header-menu{
+    position: relative;
+    box-shadow: 0px 2px 5px 0px #00000036;
+   
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 5px;
+    float: left;
+    margin-right: 850px;
+}
+.logo img {
+    width: 120px;  
+    height: auto;
+    border-radius: 100px;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    gap: 8px;
+    float: right;
+    margin-right: 0px;
+}
+
+.main-menu a{
+    font-weight: 500;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    
+
+}
+
+.main-menu li{
+    float: right;
+    padding: 12px 15px;
+    
+}
+
+.slider-width{
+    width: 100%;
+    height: auto;
+
+}
+
+
+.Welcome-text{
+    width: 80%;
+    margin: 20px auto;
+    text-align: top;
+    text-align: right;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 1.6;
+
+}
+.welcome-text p,p{
+    width: 80%;
+    margin: 20px auto;
+    text-align: top;
+    text-align: right;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.card {
+    background-color: #fff;
+    border-radius: 1px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 25px;
+    
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+.card h3 {
+    margin: 10px 0 8px;
+    font-size: 1.1em;
+    color: #333;
+}
+.card p {
+    font-size: 0.9em;
+    color: #555;
+    min-height: 60px;
+}
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #800020;
+    text-decoration: none;
+    font-weight: bold;
+}
+.card:hover {
+    background-color: #800020;
+    color: #fff;
+    transform: translateY(-5px);
+}
+.card:hover h3,
+.card:hover p,
+.card:hover a {
+    color: #fff;
+}
+.map img{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.academics img{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.word{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.6;
+}
+.events h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.events h4 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  object-fit: cover;
+   margin-left: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.gallery p{
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight:10px;
+}
+.DVC-footer {
+  background-color: #800020;
+  color: #fff;
+  padding: 40px 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.footer-logo-cert {
+  flex: 1 1 400px;
+  
+}
+
+.DVC-logo {
+  max-width: 100px;
+  margin-left: 500px;
+  border-radius:100px ;
+
+}
+.DVC-logo p {
+  margin: 10px 100px;
+  font-size: 14px;
+  flex: 1 1 200px;
+  margin-left: 100px;
+}
+
+
+.certification img {
+  width: 300px;
+  height: auto;
+  margin-left: 100px;
+
+}
+
+.footer-nav {
+  display: flex;
+  flex: 2 1 300px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-section {
+  flex: 1 1 200px;
+}
+
+.nav-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10%;
+  color: #ffcc00; 
+}
+
+.nav-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-section ul li {
+  margin-bottom: 8px;
+}
+
+.nav-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-section ul li a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  border-top: 1px solid #fff;
+  font-size: 20px;
+  background: #ffb00f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+.footer-bottom p {
+  text-align: center;
+  font-size: 16px;
+}
+.privacy-link {
+  color: #ffcc00;
+  text-decoration: none;
+  text-align: right;
+}
+
+.privacy-link:hover {
+  text-decoration: underline;
+}
+
+            </style>
+
+    </head>
+    <body>
+    
+        <div class=" width-100 header-menu">
+    <div class=" container">
+    <div class="logo"> <img src="https://i.postimg.cc/pX7WtLhb/dvc2.jpg"></div>
+    <ul class="main-menu">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Program</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="#">Home</a></li>
+    </ul>
+    </div>
+    </div>
+
+    <div class="width-100 top-header">
+    <div class="container">
+    <div class="width-100">
+    <b class="news-list">DVC</b>
+    <marquee class="headquote">Davao Vision Colleges (DVC) - Turn your vision here in Davao Vision Colleges.</marquee>
+    </div>
+    </div>
+    </div>
+
+    
+<div class="fade-slideshow-container">
+        <img  src="https://i.postimg.cc/85tGXpQY/SLIDER.png" alt="slider">
+        <img  src="https://i.postimg.cc/wvHxb4tf/1.jpg" alt="1">
+        <img  src="https://i.postimg.cc/Y932cNgb/2.jpg" alt="2">
+        <img  src="https://i.postimg.cc/G2r3SgBN/3.jpg" alt="3">
+        <img  src="https://i.postimg.cc/wvVxK5JF/5.jpg" alt="4">
+        <img  src="https://i.postimg.cc/xCRjrGHx/6.jpg" alt="5">
+        <img  src="https://i.postimg.cc/rmJy6GWf/4.jpg" alt="6">
+        <img  src="https://i.postimg.cc/9MpX3PTn/7.jpg" alt="7">
+    </div>
+
+        <div class="Welcome-text">
+            <br><h2><b>Welcome to Davao Vision Colleges</b></h2>
+            <p>Davao Vision Colleges (DVC) is a private educational institution located in Davao City, Philippines. Established in 2009, DVC has been providing quality education and training to students for over five decades. The college offers a wide range of programs and courses, including senior high school (shs), information technology (bsit), theology.</p>
+            <p>DVC is committed to providing a holistic education that focuses on the development of the whole person. The college emphasizes the importance of academic excellence, character formation, and community service. DVC also provides various extracurricular activities and programs to help students develop their skills and talents outside the classroom.</p>
+        </div>
+
+     <div class="container">
+        <div class="card">
+                <img src="https://i.postimg.cc/mgHbZWCS/dvcslider.jpg" alt="DVC Campus" style="width:100%">
+            <div class="card-content">
+                <h3>Senior High School</h3>
+            <p>Pre-University, Basic Education, Foundation, Pathway </p>
+            <a href="#">Read More</a>
+            </div>
+        </div>
+
+    <div class="card">
+                <img src="https://i.postimg.cc/mgHbZWCS/dvcslider.jpg" alt="DVC Students" style="width:100%">
+            <div class="card-content">
+                <h3>Bachelor of Scinece in Information Technology (BSIT)</h3>
+            <p>Tech, Computer, Digital, Science, Software</p>
+            <a href="#">Read More</a>
+            </div>
+     </div>
+     <div class="card">
+                <img src="https://i.postimg.cc/mgHbZWCS/dvcslider.jpg" alt="DVC Students" style="width:100%">
+            <div class="card-content">
+                <h3>Bachelor of Arts in Theology (AB Th)</h3>
+            <p>Religion, Ministry, Arts, Faith, Spiritual</p>
+            <a href="#">Read More</a>
+            </div>
+     </div>
+     <div class="card">
+                <img src="https://i.postimg.cc/mgHbZWCS/dvcslider.jpg" alt="DVC Students" style="width:100%">
+            <div class="card-content">
+                <h3>Education</h3>
+            <p>Teacher, Future Educator</p>
+            <a href="#">Read More</a>
+            </div>
+     </div>
+     </div>
+
+     <div class="map">
+        <img src="https://i.postimg.cc/fLBsqzQR/map.png" alt="map">
+     </div>
+     <div class="word">
+     <p>As an academic institution guided by unity and faith in God, Davao Vision Colleges Inc. remains steadfast in its commitment to academic excellence, reflected in the quality and integrity of its teaching-learning practices across all programs and levels.</p>
+     </div>
+     <div class="academics">
+        <img src="https://i.postimg.cc/zvGzqLFB/acss.png" alt="acads">
+     </div>
+     <br>
+     <div class="events">
+     <h3 >NEWS AND EVENTS</h3>
+     <br>
+     <h4><strong> RECENT EVENTS</strong></h4>
+     </div>
+     <div class="gallery">
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/0Q8xC63w/INTRAMS.jpg" alt="pic1">
+        <p>Intramurals Themed: Play as One, Win for God.</p></div>
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/SKbmJ1Gq/BBALL.jpg" alt="pic2">
+        <p></p>Intramural 2025 Basketball men Championship.</div>
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/TPvTpNcR/BBALL2.jpg" alt="pic3">
+        <p></p>1st Runner Up Basketball</div>
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/C1m0rhTP/MSR.jpg" alt="pic4">
+        <p></p>Most awaited event; Mr ans Ms Intramural 2025</div>
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/bJz8RGM0/PAFTE.jpg" alt="pic5">
+         <p>Taking Board Exam PAFTE</p>
+        </div>
+        <div class="galary-item">
+        <img src="https://i.postimg.cc/WbKNP1FP/BUWAN.jpg" alt="pic6">
+        <p></p>Buwan ng Wika, Wikang Atin.</div>
+            
+        </div>
+     </div>
+<footer class="DVC-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-logo-cert">
+      <img src="https://i.postimg.cc/pX7WtLhb/dvc2.jpg" alt="DVC logo" class="DVC-logo">
+      <p>Davao City 8000, Davao del Sur, Philippines</p>
+        <p>Stone Rock Village: 0951-164-9654/ 227-8337</p>
+      <div class="certification">
+        <img src="https://i.postimg.cc/FzHrhfVm/bdo.webp" alt="DPO/DPS Registered Badge">
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      <div class="nav-section">
+        <h4>Governance</h4>
+        <ul>
+          <li><a href="#">Vision Mission Values</a></li>
+          <li><a href="#">Corporate Documents</a></li>
+        </ul>
+      </div>
+      <div class="nav-section">
+        <h4>News & Info</h4>
+        <ul>
+          <li><a href="#">News and Events</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Legion of Topnotchers</a></li>
+        </ul>
+      </div>
+      <div class="nav-section">
+        <h4>Admission</h4>
+        <ul>
+          <li><a href="#">Apply Now</a></li>
+          <li><a href="#">Requirements</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+     <div class="footer-bottom">
+    <p>&copy; 2025, All Rights Reserved. DVC website terms and conditions of use.</p>
+    <a href="/privacy-notice" class="privacy-link">Privacy Notice</a>
+  </div>
+</footer>
+
+    </body>
+</html>
